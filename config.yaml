@@ -1,0 +1,28 @@
+# 机器人WxId，修改为自己的机器人wxId
+botWxId: "wxid_u9l49jiqm18v22"
+# 机器人名字
+botNickname: "小明同学"
+# 管理员wxId，多个管理员依次添加，用于管理机器人的wxId
+superUsers:
+  - "wxid_a1o0a8wq0pn722"
+# 管理员命令前缀，匹配系统内置管理员指令需要
+commandPrefix: "/"
+# 唤醒机器人限制，可选:at，表示群聊必须at机器人才可匹配指令，留空时为默认规则(无特殊要求建议留空)
+wakeUpRequire: ""
+
+# 本项目运行时会启动一个HTTP服务，包含一个接收事件回调服务，该配置项为HTTP服务端口
+# 在所接入的VX框架中请将回调地址改为 http://[本项目运行服务器IP]:[serverPort]/wxbot/callback
+serverPort: 8867
+# 本项目运行时会启动一个HTTP服务，包含一个静态图片文件服务，用于将本地图片作为网络图片
+# 仅当在插件中使用ctx.ReplyImage(local://[图片路径时])才会用到该项
+# 本项目和VX框架运行在同一台服务器时，请填写http://[本机IP]:[serverPort]，否则请填写本项目运行服务器IP，也可以使用域名
+serverAddress: "http://127.0.0.1:8867"
+
+# 接入框架配置
+framework:
+  # 框架选择，可选 Dean、VLW
+  name: "Dean"
+  # wxbot主动请求微信框架的地址，比如：http://[运行Dean的服务器ip]:[Dean的HTTP端口]
+  apiUrl: "http://127.0.0.1:8866"
+  # VX框架HTTP鉴权Token (Dean目前没有，vlw需要)
+  apiToken: ""
